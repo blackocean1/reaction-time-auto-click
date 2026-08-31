@@ -1,0 +1,17 @@
+{
+  "name": "reaction-time-auto-click",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node --test tests/reaction-time-auto-click.test.js tests/desktop-runner.test.js",
+    "check": "node --check reaction-time-auto-click.user.js && node --check desktop-runner.js && node --check sea-entry.js && node --check build-exe.js",
+    "build:exe": "npm test && npm run check && node build-exe.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "postject": "^1.0.0-alpha.6"
+  },
+  "dependencies": {
+    "playwright-core": "^1.62.1"
+  }
+}
